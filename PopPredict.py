@@ -22,7 +22,8 @@ fit = np.polyfit(total_population["year"], total_population["total_population"],
 slope, intercept = fit
 
 # Define the years for prediction
-years = [1970,1980,1990,2000,2010,2015,2020,2022 , 2030, 2040, 2050, 2060, 2070, 2080, 2090, 2100, 2110, 2120, 2130, 2140]
+years = [1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100, 2105, 2110, 2115, 2120, 2125, 2130, 2135, 2140]
+
 
 # Predict the population for future years
 future_population = []
@@ -34,7 +35,7 @@ for year in years:
 future_population_df = pd.DataFrame(future_population)
 
 # Create the line plot with circle data points
-fig = px.line(future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> Regression Model y =m(x) + b')
+fig = px.line(markers = True,future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> AI Model y =m(x) + b')
 fig.update_layout(
     xaxis_title='Year',
     yaxis_title='Population',

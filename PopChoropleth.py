@@ -27,8 +27,8 @@ fig = px.choropleth(wp_df_melted, locations = 'ISO-3', color = 'Population',
                     title = 'World Population by Country (1970-2022)', 
                     hover_name="Country",
                     hover_data = {'ISO-3':False,},
-                    projection = 'robinson',
-                    range_color=(0, 200000000), #to fix the scale
+                    projection = 'orthographic',
+                    range_color=(0, 600000000), #to fix the scale
                     animation_frame='Year', #added new column as the animation frame
                     color_continuous_scale=px.colors.sequential.Viridis)
  
