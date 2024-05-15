@@ -22,7 +22,7 @@ fit = np.polyfit(total_population["year"], total_population["total_population"],
 slope, intercept = fit
 
 # Define the years for prediction
-years = [1970,1980,1990,2000,2010,2015,2020,2022 , 2030, 2040, 2050, 2060, 2070, 2080, 2090, 2100, 2110, 2120, 2130, 2140]
+years = [1970 ,1980 ,1990 ,2000 ,2010 ,2015 ,2020 , 2022, 2030, 2040, 2050, 2060, 2070, 2080, 2090, 2100, 2110, 2120, 2130, 2140]
 
 # Predict the population for future years
 future_population = []
