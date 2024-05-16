@@ -18,15 +18,16 @@ fig = px.choropleth(df, locations='Country/Territory',
                     scope= "world",
                     projection = "natural earth",
                     locationmode='country names',
-                    range_color=(0, 300))  # Set the range for the color scale
+                    range_color=(0, 70))  # Set the range for the color scale
 
 # Customize layout
 fig.update_layout(
-    title=dict(text='<b>Countries Arithmetic Density (2022) <br> Arithematic Density = Population / Area of land km^2 </b>', x=0.5),
+    title=dict(text='<b>World Arithmetic Density (2022) <br> Arithematic Density = Population / Area of land km^2 </b>', x=0.5),
     coloraxis_colorbar=dict(
         title='Arithmetic Density',
         tickprefix='',
-        len=0.8
+        len=0.5
+
     )
 )
 
