@@ -22,7 +22,7 @@ fit = np.polyfit(total_population["year"], total_population["total_population"],
 slope, intercept = fit
 
 # Define the years for prediction
-years = [1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100, 2105, 2110, 2115, 2120, 2125, 2130, 2135, 2140, 2300, 2400, 2500, 2600, 2700, 2800, 2900, 2950, 3000]
+years = [1970, 1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070, 2075, 2080, 2085, 2090, 2095, 2100, 2105, 2110, 2115, 2120, 2125, 2130, 2135, 2140]
 
 
 # Predict the population for future years
@@ -35,11 +35,11 @@ for year in years:
 future_population_df = pd.DataFrame(future_population)
 
 # Create the line plot with circle data points
-fig = px.line(markers = True,data_frame= future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> AI Model y =m(x) + b <br> m = 83371045.10416393 , b = -160587659522.294')
+fig = px.line(markers = True,data_frame= future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> AI Model y =m(x) + b')
 fig.update_layout(
     xaxis_title='Year',
     yaxis_title='Population',
-    xaxis_range=[1970, 3000],  # Adjust the x-axis range to include future years
+    xaxis_range=[1970, 2150],  # Adjust the x-axis range to include future years
     yaxis_range=[0, future_population_df['total_population'].max() * 1.1]  # Adjust the y-axis range to include future values
 )
 

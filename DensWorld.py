@@ -15,9 +15,10 @@ fig = px.choropleth(df, locations='Country/Territory',
                     color='Arithmetic Density',
                     hover_name='Country/Territory',
                     color_continuous_scale='jet',
+                    scope= "world",
                     projection = "natural earth",
                     locationmode='country names',
-                    range_color=(0, 400))  # Set the range for the color scale
+                    range_color=(0, 300))  # Set the range for the color scale
 
 # Customize layout
 fig.update_layout(
