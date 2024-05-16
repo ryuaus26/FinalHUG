@@ -35,7 +35,7 @@ for year in years:
 future_population_df = pd.DataFrame(future_population)
 
 # Create the line plot with circle data points
-fig = px.line(markers = True,future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> AI Model y =m(x) + b')
+fig = px.line(markers = True,data_frame= future_population_df, x='year', y='total_population', title='Total World Population (with Future Prediction) <br> AI Model y =m(x) + b')
 fig.update_layout(
     xaxis_title='Year',
     yaxis_title='Population',
