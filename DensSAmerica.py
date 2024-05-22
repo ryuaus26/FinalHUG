@@ -16,7 +16,7 @@ fig = px.choropleth(df, locations='Country/Territory',
                     hover_name='Country/Territory',
                     color_continuous_scale='jet',
                     scope= "south america",
-                    projection = "natural earth",
+                    projection = "equirectangular",
                     locationmode='country names',
                     range_color=(0, 50))  # Set the range for the color scale
 
